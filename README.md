@@ -63,11 +63,11 @@ In the Suspension_Coil dataset, the weight capacities of multiple suspension coi
 ### PSI Summary for each Manufacturing Lot
 - The PSI summary statistics per lot are shown below. Each manufacturing lot has a sample size of 50.
 - The mean of all lots combined is similar when compared to the mean of each individual lot.
-- Lot 1 has the mean same as that of population at 1500.
-- Lot 2 has mean similar to population mean.
+- Lot 1 has the mean same as that of population at 1500 and similar to mean of PSI across all lots.
+- Lot 2 has mean similar to population mean and mean across all lots.
 <img src="images/per_lot.png" width="600" />
 
-- Lot 3 shows significant deviation of psi values from standard compared to Lot 1 and Lot 2. That means that Lot 3 has more data spread out from its mean as confirmed by its large variance value.
+- Though the mean of Lot 3's distribution is similar to that of all lots, it shows significant deviation of psi values from standard compared to Lot 1 and Lot 2. That means that Lot 3 has more data spread out from its mean as confirmed by its large variance value.
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 PSI. 
 **The variance for the total manufacturing lot is within the expected design specifications** of staying under 100 PSI (62 < 100), but we can see that there are clearly big problems in Lot 3 with a variance of 170 PSI. **Lot 3 does not meet the maximum variance requirement** while Lot 1 and Lot 2 comply.
