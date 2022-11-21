@@ -29,10 +29,10 @@ The MechaCar dataset contains 50 prototype MechaCars, which were produced usin
 
 - Multiple regression with R is performed to predict the MPG of MechaCar given certain values of vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
 
-<img src="images/lm_coef.png" width="500" />
+<img src="images/lm_coef.png" width="600" />
 
 - With the coefficients generated, the linear model for this scenario can be as below:     
-**Y = -0.0104 + 6.267 X<sub>1</sub> + 0.0013 X<sub>2</sub> + 0.0688 X<sub>3</sub> + 3.546 X<sub>4</sub> - 3.411 X<sub>5</sub> + c**     
+**Y = -0.0104 + 6.267 X<sub>1</sub> + 0.0012 X<sub>2</sub> + 0.0688 X<sub>3</sub> + 3.546 X<sub>4</sub> - 3.411 X<sub>5</sub> + c**     
 where Y = mpg (dependent variable)   
 X<sub>1</sub> = vehicle length (predictor/independent variable),    
 X<sub>2</sub> = vehicle weight (predictor/independent variable),    
@@ -40,23 +40,18 @@ X<sub>3</sub> = spoiler angle (predictor/independent variable),
 X<sub>4</sub> = ground clearance (predictor/independent variable),    
 X<sub>5</sub> = AWD (predictor/independent variable),    
 c = random variable representing the error or residuals.   
-- The coefficient values for each predictor variable are the slope estimates. It can be observed that **slope estimates are non zero**, though some are close to zero. If we consider the (predictor variable of) vehicle length: Given that other variables are held constant, for a unit increase in vehicle length, mpg increases over 6 times. 
-- The negative sign of the coefficient of AWD tells that there is a negative correlation between mpg and AWD.
 
 ### Summary of Regression
 
-<img src="images/lm_summary.png" width="500" />
-- The p-values for the coefficients indicate whether these relationships are statistically significant.
+<img src="images/lm_summary.png" width="700" />
 
-
-
-
-
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-
-Is the slope of the linear model considered to be zero? Why or why not?
-
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+- From the values of Residuals, it can be observed that the median (=-0.0692) is about centered around zero. This tells that residuals are somewhat symmetrical and that our **model is predicting evenly** at both the high (absolute value: |18.58|) and low (absolute value: |-19.47|) ends of the dataset. This implies a normal distribution. 
+- It can be observed that vehicle length and ground clearance have large t-statistic and their corresponding standard errors are small. Larger t-statistic confirms that corresponding coefficient is not zero. 
+- The p-values for the coefficients indicate whether these relationships are statistically significant(the confidence that coefficients are not zero). A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant. The strongest contributor of non-random variance seems to be the vehicle length with a p-value of 2.60e-12. The other strong contributor of non-random variance is the ground clearance with a p-value of 5.21e-8.
+- The coefficient values for each predictor variable are the slope estimates of linear model. It can be observed that **slope estimates are non zero**, though some are close to zero. If we consider the (predictor variable of) vehicle length: Given that other variables are held constant, for a unit increase in vehicle length, mpg increases over 6 times. The negative sign of the coefficient of AWD tells that there is a negative correlation between mpg and AWD.
+- In summary, **vehicle length and ground clearance variables represent non-random amounts of variance** as applied to the mpg values. 
+- The slope of the linear model is not zero. This can be seen in coefficients that contain significant non-zero values (vehicle length, ground clearance, and AWD), and the p-values are less than the significance level of p=0.05.
+- Since R-squared gives the percentage of variance, it can be interpreted that **71.49% of variation in mpg is explained by all the 5 predictors combined**. This is a high percentage of predictability and concludes that roughly 29% of variance in mpg is unexplained.
 
 
 ## Summary Statistics on Suspension Coils
