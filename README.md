@@ -23,11 +23,10 @@ The project helps a data analyst perform retrospective analysis of historical da
 
 ## Linear Regression to Predict MPG
 
-The MechaCar dataset contains 50 prototype MechaCars, which were produced using multiple design specifications to identify ideal vehicle performance.
+- The MechaCar dataset contains 50 prototype MechaCars, which were produced using multiple design specifications to identify ideal vehicle performance.
+- Multiple regression with R is performed to predict the MPG of MechaCar given certain values of vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
 
 ### Multiple Regression Model
-
-- Multiple regression with R is performed to predict the MPG of MechaCar given certain values of vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance.
 
 <img src="images/lm_coef.png" width="600" />
 
@@ -46,55 +45,55 @@ c = random variable representing the error or residuals.
 <img src="images/lm_summary.png" width="700" />
 
 - From the values of Residuals, it can be observed that the median (=-0.0692) is about centered around zero. This tells that residuals are somewhat symmetrical and that our **model is predicting evenly** at both the high (absolute value: |18.58|) and low (absolute value: |-19.47|) ends of the dataset. This implies a normal distribution. 
-- It can be observed that vehicle length and ground clearance have large t-statistic and their corresponding standard errors are small. Larger t-statistic confirms that corresponding coefficient is not zero. 
+- From the Coefficients section, it can be observed that vehicle length and ground clearance have large t-statistic and their corresponding standard errors are small. Larger t-statistic confirms that corresponding coefficient is not zero. 
 - The p-values for the coefficients indicate whether these relationships are statistically significant(the confidence that coefficients are not zero). A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant. The strongest contributor of non-random variance seems to be the vehicle length with a p-value of 2.60e-12. The other strong contributor of non-random variance is the ground clearance with a p-value of 5.21e-8.
 - The coefficient values for each predictor variable are the slope estimates of linear model. It can be observed that **slope estimates are non zero**, though some are close to zero. If we consider the (predictor variable of) vehicle length: Given that other variables are held constant, for a unit increase in vehicle length, mpg increases over 6 times. The negative sign of the coefficient of AWD tells that there is a negative correlation between mpg and AWD.
 - In summary, **vehicle length and ground clearance variables represent non-random amounts of variance** as applied to the mpg values. 
 - The slope of the linear model is not zero. This can be seen in coefficients that contain significant non-zero values (vehicle length, ground clearance, and AWD), and the p-values are less than the significance level of p=0.05.
 - Since R-squared gives the percentage of variance, it can be interpreted that **71.49% of variation in mpg is explained by all the 5 predictors combined**. This is a high percentage of predictability and concludes that roughly 29% of variance in mpg is unexplained.
 
-
 ## Summary Statistics on Suspension Coils
 
-In the Suspension_Coil dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
+In the Suspension_Coil dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. It is also specified that the population mean is 1500 pounds per square inch.
 
 ### PSI Summary across all Manufacturing Lots
-- Below is the PSI summary statistics of all of the manufacturing lots. The mean of all the lots combined is 1498.78, this is close to the median (1500).
+- Below is the PSI summary statistics of all of the manufacturing lots. The mean of all the lots combined is 1498.78, this is close to the population mean (1500).
 <img src="images/all_lots.png" width="500" />
 
 ### PSI Summary for each Manufacturing Lot
-- The PSI summary statistics per lot are shown below. The mean of all lots combined is similar when compared to the mean of each individual lot.
+- The PSI summary statistics per lot are shown below. Each manufacturing lot has a sample size of 50.
+- The mean of all lots combined is similar when compared to the mean of each individual lot.
+- Lot 1 has the mean same as that of population at 1500.
+- Lot 2 has mean similar to population mean.
 <img src="images/per_lot.png" width="600" />
 
 - Lot 3 shows significant deviation of psi values from standard compared to Lot 1 and Lot 2. That means that Lot 3 has more data spread out from its mean as confirmed by its large variance value.
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 PSI. 
-The variance for the total manufacturing lot is 62 < 100, which is within the expected design specifications of staying under 100 PSI, but we can see that there are clearly big problems in Lot 3 with a variance of 170 PSI. Lot 3 does not meet the maximum variance requirement while Lot 1 and Lot 2 comply.
+**The variance for the total manufacturing lot is within the expected design specifications** of staying under 100 PSI (62 < 100), but we can see that there are clearly big problems in Lot 3 with a variance of 170 PSI. **Lot 3 does not meet the maximum variance requirement** while Lot 1 and Lot 2 comply.
 
 
 ## T-Tests on Suspension Coils
 
+T-tests are performed to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
 ### T-test for all lots
-- When a t-test is run across all manufacturing lots combined, a p-value of 0.6028, alpha = 0.05.   
-0.60 > 0.05, which means the total manufacturing lot is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
+- When a t-test is run across all manufacturing lots combined, the generated p-value of 0.6028 is compared with alpha = 0.05 to check for statistical significance. Since p-value is greater than significance level, **the total manufacturing lot is not statistically significant from the normal distribution** and normality can be assumed. The mean falls within the 95% confidence interval.
 <img src="images/t-test_all.png" width="500" />
 
 ### T-test for Lot 1
-- For Lot 1, the p-value = 1 and alpha = .05   
-1 > .05, which means Lot 1 is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
+- The t-test performed for Lot 1 shows p-value of 1. When compared with alpha, p-value is more than significance level, it can be concluded that **Lot 1 is not statistically significant from the normal distribution** and normality can be assumed. The mean falls within the 95% confidence interval.
 <img src="images/t-test_1.png" width="700" />
 
 ### T-test for Lot 2
-Lot 2: p-value = .6072, alpha = .05     
-.60 > .05, which means Lot 2 is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
-
+- The t-test for Lot 2 shows p-value = .6072. When compared with alpha = 0.05, p-value is greater than alpha, which means **Lot 2 is not statistically significant from the normal distribution** and normality can be assumed. The mean falls within the 95% confidence interval.
 <img src="images/t-test_2.png" width="700" />
 
 ### T-test for Lot 3
-Lot 3: p-value = .04168, alpha = .05     
-.04 < .05, which means it is statistically significant from the normal distribution and normality cannot be assumed. However, the mean falls within the 95% confidence interval.
-
+- The t-test for Lot 3 shows p-value = .04168. Since alpha = .05, p-value is less than alpha, which means **Lot 3 is statistically significant from the normal distribution and normality cannot be assumed**. However, the mean falls within the 95% confidence interval.
 <img src="images/t-test_3.png" width="700" />
+
+If I would have started with the null hypothesis that the mean of all manufacturing lots combined has no effect on population mean, I would be right to say so based on the above summary. The same hypothesis holds true for Lot 1 and Lot 2. However, I would fail to prove that the mean of Lot 3 has no effect on population mean.
 
 ## Study Design: MechaCar vs Competition
 
