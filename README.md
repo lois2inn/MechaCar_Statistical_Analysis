@@ -110,11 +110,11 @@ To compare the performance of MechaCar with its competition, a consumer could co
 To study statistically significant differences of MechaCar's performance vs. competition, I would choose average carrying capacity.
 
 ### Null and Alternate Hypothesis
-Null Hypothesis (H<sub>0</sub>): The average carrying capacity (expressed in cubic feet) of MechaCar's prototype is similar to competitor's vehicle in the same vehicle class.
+Null Hypothesis (H<sub>0</sub>): The average carrying capacity (expressed in cubic feet) of MechaCar's prototype is similar to competitor's vehicle in the same vehicle class.    
 Alternate Hypothesis (H<sub>a</sub>):The average carrying capacity of MechaCar's prototype is above or below that of competitor's vehicle.
 
 ### Statistical Test used
-To determine statistical significance, two-sample t-Tests can be performed. 
+To determine statistical significance, two-sample t-Tests can be performed.     
 Analytical question: Is there a statistical difference between the distribution means of average carrying capacity from the two samples (MechaCar and its competitor)?
 
 ### Data needed
