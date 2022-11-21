@@ -59,9 +59,8 @@ c = random variable representing the error or residuals.
 In the Suspension_Coil dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
 
 ### PSI Summary across all Manufacturing Lots
-- Below is the PSI summary statistics of all of the manufacturing lots. The mean of all the mots combined is 1498.78, this is close to the median (1500).
+- Below is the PSI summary statistics of all of the manufacturing lots. The mean of all the lots combined is 1498.78, this is close to the median (1500).
 <img src="images/all_lots.png" width="500" />
-
 
 ### PSI Summary for each Manufacturing Lot
 - The PSI summary statistics per lot are shown below. The mean of all lots combined is similar when compared to the mean of each individual lot.
@@ -76,18 +75,26 @@ The variance for the total manufacturing lot is 62 < 100, which is within the ex
 ## T-Tests on Suspension Coils
 
 ### T-test for all lots
+- When a t-test is run across all manufacturing lots combined, a p-value of 0.6028, alpha = 0.05.   
+0.60 > 0.05, which means the total manufacturing lot is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
 <img src="images/t-test_all.png" width="500" />
 
 ### T-test for Lot 1
-<img src="images/t-test_1.png" width="600" />
+- For Lot 1, the p-value = 1 and alpha = .05   
+1 > .05, which means Lot 1 is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
+<img src="images/t-test_1.png" width="700" />
 
 ### T-test for Lot 2
-<img src="images/t-test_2.png" width="600" />
+Lot 2: p-value = .6072, alpha = .05     
+.60 > .05, which means Lot 2 is not statistically significant from the normal distribution and normality can be assumed. The mean falls within the 95% confidence interval.
+
+<img src="images/t-test_2.png" width="700" />
 
 ### T-test for Lot 3
-<img src="images/t-test_3.png" width="600" />
+Lot 3: p-value = .04168, alpha = .05     
+.04 < .05, which means it is statistically significant from the normal distribution and normality cannot be assumed. However, the mean falls within the 95% confidence interval.
 
-summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
+<img src="images/t-test_3.png" width="700" />
 
 ## Study Design: MechaCar vs Competition
 
