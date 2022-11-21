@@ -97,10 +97,26 @@ If I would have started with the null hypothesis that the mean of all manufactur
 
 ## Study Design: MechaCar vs Competition
 
-short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+To compare the performance of MechaCar with its competition, a consumer could consider the following metrics:
+- Cost
+- Horsepower
+- Safety Rating
+- City and highway fuel efficiency
+- Engine type
+- Drive Train (AWD)
+- Average Carrying Capacity (cu Ft)
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+### Metric to test
+To study statistically significant differences of MechaCar's performance vs. competition, I would choose average carrying capacity.
+
+### Null and Alternate Hypothesis
+Null Hypothesis (H<sub>0</sub>): The average carrying capacity (expressed in cubic feet) of MechaCar's prototype is similar to competitor's vehicle in the same vehicle class.
+Alternate Hypothesis (H<sub>a</sub>):The average carrying capacity of MechaCar's prototype is above or below that of competitor's vehicle.
+
+### Statistical Test used
+To determine statistical significance, two-sample t-Tests can be performed. 
+Analytical question: Is there a statistical difference between the distribution means of average carrying capacity from the two samples (MechaCar and its competitor)?
+
+### Data needed
+In order to run these statistical tests, we would need cubic space data from the MechaCar prototypes and its competitors.
+
