@@ -82,7 +82,7 @@ T-tests are performed to determine if all manufacturing lots and each lot indivi
 <img src="images/t-test_all.png" width="500" />
 
 ### T-test for Lot 1
-- The t-test performed for Lot 1 shows p-value of 1. When compared with alpha, p-value is more than significance level, it can be concluded that **Lot 1 is not statistically significant from the normal distribution** and normality can be assumed. The mean falls within the 95% confidence interval.
+- The t-test performed for Lot 1 shows p-value of 1. When compared with alpha(=0.05), p-value is more than significance level, it can be concluded that **Lot 1 is not statistically significant from the normal distribution** and normality can be assumed. The mean falls within the 95% confidence interval.
 <img src="images/t-test_1.png" width="700" />
 
 ### T-test for Lot 2
@@ -90,7 +90,7 @@ T-tests are performed to determine if all manufacturing lots and each lot indivi
 <img src="images/t-test_2.png" width="700" />
 
 ### T-test for Lot 3
-- The t-test for Lot 3 shows p-value = .04168. Since alpha = .05, p-value is less than alpha, which means **Lot 3 is statistically significant from the normal distribution and normality cannot be assumed**. However, the mean falls within the 95% confidence interval.
+- The t-test for Lot 3 shows p-value = .04168. Since alpha = 0.05, p-value is less than alpha, which means **Lot 3 is statistically significant from the normal distribution and normality cannot be assumed**. However, the mean falls within the 95% confidence interval.
 <img src="images/t-test_3.png" width="700" />
 
 If I would have started with the null hypothesis that the mean of all manufacturing lots combined has no effect on population mean, I would be right to say so based on the above summary. The same hypothesis holds true for Lot 1 and Lot 2. However, I would fail to prove that the mean of Lot 3 has no effect on population mean.
