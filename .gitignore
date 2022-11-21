@@ -1,3 +1,7 @@
+# Added .DS_Store and .RHistory
+.DS_Store
+.Rhistory
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
