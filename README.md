@@ -67,13 +67,25 @@ In the Suspension_Coil dataset, the weight capacities of multiple suspension coi
 - The PSI summary statistics per lot are shown below. The mean of all lots combined is similar when compared to the mean of each individual lot.
 <img src="images/per_lot.png" width="600" />
 
-- Lot 3 shows significant deviation of psi values from standard compared to Lot 1 and Lot 2.
+- Lot 3 shows significant deviation of psi values from standard compared to Lot 1 and Lot 2. That means that Lot 3 has more data spread out from its mean as confirmed by its large variance value.
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 PSI. 
 The variance for the total manufacturing lot is 62 < 100, which is within the expected design specifications of staying under 100 PSI, but we can see that there are clearly big problems in Lot 3 with a variance of 170 PSI. Lot 3 does not meet the maximum variance requirement while Lot 1 and Lot 2 comply.
 
 
 ## T-Tests on Suspension Coils
+
+### T-test for all lots
+<img src="images/t-test_all.png" width="500" />
+
+### T-test for Lot 1
+<img src="images/t-test_1.png" width="600" />
+
+### T-test for Lot 2
+<img src="images/t-test_2.png" width="600" />
+
+### T-test for Lot 3
+<img src="images/t-test_3.png" width="600" />
 
 summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
 
